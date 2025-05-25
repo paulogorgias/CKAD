@@ -5,8 +5,8 @@ Este repositório contém a aplicação **Color App**, projetada para demonstrar
 ## Estrutura do Projeto
 
 ```
-color-app/
-├── app/                # Código-fonte da aplicação
+BlueGreen/
+├── color-app/          # Código-fonte da aplicação
 ├── manifests/          # Arquivos de configuração Kubernetes
 ├── scripts/            # Scripts auxiliares
 └── README.md           # Documentação do projeto
