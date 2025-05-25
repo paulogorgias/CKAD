@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: new-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: canary-app
+      environment: new
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: canary-app
+        environment: new
+    spec:
+      containers:
+      - image: paulogorgias/canary-app:latest
+        name: canary-app
+        env:
+          - name: VERSION
+            value: "v2"
+        resources: {}
+status: {}

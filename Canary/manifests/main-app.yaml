@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: main-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: canary-app
+      environment: main
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: canary-app
+        environment: main
+    spec:
+      containers:
+      - image: paulogorgias/canary-app:latest
+        name: canary-app
+        resources: {}
+status: {}
